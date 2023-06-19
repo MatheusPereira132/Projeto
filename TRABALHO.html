@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto1</title>
+</head>
+
+<body>
+    <label for="nm1">Digite um Número:</label>
+    <input type="number" name="nm1" id="nm1"> <br>
+
+    <label for="nm1">Digite outro Número:</label>
+    <input type="number" name="nm2" id="nm2"> <br>
+    <input type="button" value="Enviar" name="enviar" id="enviar">
+
+    <strong><p id="soma"></p></strong>
+
+    <script>
+        var teste = window.document.getElementById('enviar')
+        teste.addEventListener('click', clicar)
+        function clicar() {
+            var a = window.document.querySelector('#nm1')
+            var b = window.document.querySelector('#nm2')
+            var c = window.document.getElementById('soma')
+            var x1 = Number(a.value)
+            var x2 = Number(b.value)
+            var total = x1 + x2
+            c.textContent = `A soma entre ${x1} e ${x2} é ${total}`
+        }
+
+    </script>
+</body>
+
+</html>
